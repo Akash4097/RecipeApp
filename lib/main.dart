@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import './categories_screen.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -29,9 +31,8 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text("DeliMeals"),
       ),
-      body: Center(
-          child: Text(
-              "Navigation Time!")), // This trailing comma makes auto-formatting nicer for build methods.
+      body:
+          CategoriesScreen(), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
