@@ -35,11 +35,11 @@ class MealItem extends StatelessWidget {
   String get affordabilityText {
     switch (affordability) {
       case Affordability.Affordable:
-        return "Simple";
+        return "Affordable";
       case Affordability.Pricey:
         return "Pricey";
       case Affordability.Luxurious:
-        return "Luxurious";
+        return "Expensive";
       default:
         return "Unknown";
     }
@@ -67,7 +67,10 @@ class MealItem extends StatelessWidget {
                     topLeft: Radius.circular(15.0),
                     topRight: Radius.circular(15.0),
                   ),
-                  child: Image.network(imageUrl),
+                  child: Image.network(
+                    imageUrl,
+                    fit: BoxFit.cover,
+                  ),
                 ),
                 Positioned(
                   bottom: 20,
