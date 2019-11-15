@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class CategoryMealScreen extends StatelessWidget {
+  static const routeName = '/category_meals';
+
   @override
   Widget build(BuildContext context) {
     final arguments =
@@ -10,9 +12,12 @@ class CategoryMealScreen extends StatelessWidget {
     final String categoryTitle = arguments["title"];
 
     return Scaffold(
-        appBar: AppBar(
-          title: Text(categoryTitle),
-        ),
-        body: Center(child: Text("The Recipes For the Category")));
+      appBar: AppBar(
+        title: Text(categoryTitle),
+      ),
+      body: Center(
+        child: Text("The Recipes For the Category"),
+      ),
+    );
   }
 }
