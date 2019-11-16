@@ -58,7 +58,10 @@ class MealDetailsScreen extends StatelessWidget {
                       child: Padding(
                         padding: const EdgeInsets.symmetric(
                             vertical: 5, horizontal: 10),
-                        child: Text(selectedMeal.ingredients[index]),
+                        child: Text(
+                          selectedMeal.ingredients[index],
+                          style: TextStyle(color: Colors.white, fontSize: 18),
+                        ),
                       ));
                 },
                 itemCount: selectedMeal.ingredients.length,
